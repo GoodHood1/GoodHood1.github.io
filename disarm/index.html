@@ -4,9 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Default HTML</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <h1>whats up</h1>
-  <button>ello</button>
+    <div class="section">
+        <div class="page">
+            <div class="page-content">
+                <h2>On the Subject of Bengo schmengo</h2>
+
+                <p>I mean there's no real modules yet but i pasted the XO manual for testing...</p>
+                <ul>
+                    <li>This module contains a 3×3 display, two arrow buttons on the right, a circular button between
+                        the two arrows, and a letter display on top. Pressing the arrows will cycle between six
+                        different games of tic-tac-toe.</li>
+                    <li>Each board corresponds to a letter in an English word. The boards are ordered from top to bottom 
+						according to the word, but the module may not initialize at the beginning of the decrypted word. 
+                        Pressing the circular button toggles between the boards and submission letters. In the submission
+                        phase, the 3×3 grid will display letters which, when pressed, are added to the top display;
+                        the arrows can be used to switch between three pages of letters. The bottom-right space on
+                        the third page can be used as a backspace button. Pressing the circular button again will
+                        exit the submission phase, but keep the currently inputted letters. Entering six letters
+                        will automatically submit the input and solve the module if correct, or strike and clear
+                        the input if incorrect.</li>
+                </ul>
+
+                <em>Decrypting the Boards</em>
+                    top-left and leaving a blank slot in between Z and A.</p>
+                
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 2</div>
+        </div>
+        <div class="page">
+            <div class="page-content">
+                <br>
+                <table class="center">
+                    <tr>
+                        <td>___</td>
+                        <td>___</td>
+                        <td>___</td>
+                    </tr>
+                    <tr>
+                        <td>___</td>
+                        <td>_!_</td>
+                        <td>___</td>
+                    </tr>
+                    <tr>
+                        <td>___</td>
+                        <td>___</td>
+                        <td>___</td>
+                    </tr>
+                </table>
+                
+                <p><br>If the highlighted space is an X, use the left letter in the corresponding space in the grid
+                    above. Otherwise, if the space is empty, use the middle letter. Otherwise, if the space is an O,
+                    use the right letter.</p>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 2</div>
+        </div>
+    </div>
 </body>
 </html>

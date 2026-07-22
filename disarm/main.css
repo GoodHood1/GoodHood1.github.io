@@ -1,0 +1,39 @@
+
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('cmuserif-roman.ttf');
+}
+
+h2, h3, h4 {
+    text-decoration: underline;
+}
+
+html {
+    font-family: 'Special Elite', monospace;
+    font-size: 12pt;
+    line-height: 1.4;
+}
+
+.page {
+        margin: 1em auto;
+        padding: 0;
+        border: 1px solid #222; /* Safely using px because exists outside layout of page content */
+        box-shadow: #222 0.0em 0em 0.6em;
+        clear: both;
+        background-color: #FFF;
+        background-size: 100%;
+        width: 8.5in; /* = 8.5in at 12pt (1em) */
+        min-height: 10in; /* = 11in at 12pt (1em) */
+    }
+
+
+
+.page-content {
+    margin: 0 .755in;
+    padding-top: 2em;
+    min-height: 9in; /* Leaving 3em at the bottom for footer (0.75in) */
+}
+
+.page-footer {
+    text-align: center;
+}
