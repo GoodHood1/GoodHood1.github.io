@@ -9,11 +9,12 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
+            
         }
-        div {
+        .card {
             background-color: #fff;
             margin: 10px;
-            padding:10px;
+            padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -23,18 +24,55 @@
         p {
             color: #666;
         }
+
+        .tripDiv {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 10%;
+
+        }
+        .scoreRow td {
+            background-color: #000000;
+            color: white;
+            font-size: 50pt;
+            width: 50%;
+            padding: 0 20px;
+        }
+
     </style>
 </head>
 <body>
-    <div>   
+    <div class="card">   
         <h3>Jocelyn Gower</h3>
         <p>Result - Every action, thought, and effort you or those around you undertake generates an eternal surplus of misery over well-being.</p>
         <p>Thank you for using our services!</p>
     </div>
-    <div>
+    <div class="card">
         <h3>Lucas Gower</h3>
         <p>Result - Imminent death.</p>
         <p>Thank you for using our services!</p>
+    </div>
+
+    <div class="tripDiv">
+        <p>Trip Scoreboard</p>
+        <table class="tripTable">
+            <tr>
+                <th>Alan</th>
+                <th>Joss</th>
+            </tr>
+            <tr class="scoreRow">
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
