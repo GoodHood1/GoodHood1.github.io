@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daisy</title>
+    <style>
+        :root {
+            --bg: #554639;
+            --panel: #ffffff;
+            --text: #4d3a2d;
+            --accent: #ff7aa2;
+            --accent-2: #ffd166;
+            --accent-3: #8ec5a1;
+            --shadow: 0 20px 40px rgba(77, 58, 45, 0.12);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: linear-gradient(135deg, #fff8f2 0%, #ffeef6 100%);
+            min-height: 10vh;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(255,122,162,0.95), rgba(255,209,102,0.9));
+            color: white;
+            border-radius: 28px;
+            padding: 42px 32px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "✿";
+            position: absolute;
+            font-size: 70px;
+            opacity: 0.2;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .hero::before { top: -8px; right: 14px; }
+        .hero::after { bottom: -6px; left: 24px; animation-delay: 1s; }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2rem, 4vw, 3.1rem);
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 1.08rem;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        .section {
+            margin-top: 24px;
+            display: grid;
+            gap: 18px;
+        }
+
+        .card {
+            background: var(--panel);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card p,
+        .card li {
+            line-height: 1.7;
+            color: #6f584a;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap:wrap;
+            gap: 100px;
+            margin-top: 12px;
+        }
+
+        .pill {
+            background: #fff3e6;
+            color: #8d5a34;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .note {
+            background: linear-gradient(135deg, #fff, #fff8ef);
+            border-left: 6px solid var(--accent);
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            color: #8b6d59;
+            font-size: 0.95rem;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 700px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="hero">
+            <h1>Hi, Daisy 🌷</h1>
+            <p>This little page is for someone sweet, bright, and full of charm. A place with flowers, sunshine, soft colors, and a few things that feel like a happy little hug.</p>
+        </section>
+
+        <section class="section">
+            <div class="card">
+                <h2>What Daisy would probably love</h2>
+                <div class="pill-row">
+                    <span class="pill">Pretty flowers</span>
+                    <span class="pill">Cozy mornings</span>
+                    <span class="pill">Good music</span>
+                    <span class="pill">Warm smiles</span>
+                    <span class="pill">A little sparkle</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section grid">
+            <div class="card">
+                <h2>Her vibe</h2>
+                <p>Soft, lovely, and a bit magical. Daisy feels like the kind of person who would enjoy a page that is gentle, colorful, and full of little joys.</p>
+            </div>
+            <div class="card">
+                <h2>Little joys</h2>
+                <ul>
+                    <li>Sunlight on a window seat</li>
+                    <li>Sweet tea and quiet moments</li>
+                    <li>Pretty notes and kind words</li>
+                    <li>Unexpected laughter</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card note">
+                <h2>A tiny message</h2>
+                <p>May your day be bright, your heart be light, and your world feel a little more beautiful than it did yesterday.</p>
+            </div>
+        </section>
+
+        <div class="footer">Made with a little love and a lot of sunshine.</div>
+    </div>
+</body>
+</html>

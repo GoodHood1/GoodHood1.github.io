@@ -17,60 +17,49 @@
             <h2 class="subtitle">Written and created by Alan Polaszek</h2>
             
         </div>
-        <div class="page-footer">Page 1 of 2</div>
+        <div class="page-footer">Page 1 of PAGE_NUM</div>
     </div>
     <div class="page">
         <div class="page-content">
-            <h2>On the Subject of Nothing Yet</h2>
+            <h2>On the Subject of Wire Cutting</h2>
 
-            <p>I mean there's no real modules yet but i pasted the XO manual for testing...</p>
+            <p>This module contains 4 wires of various colours. </p>
+            <p>Only one wire needs to be cut to solve the module. Wires are ordered from top to bottom.</p>
+            <p>Follow the list of rules to determine which wire to cut:</p>
             <ul>
-                <li>This module contains a 3×3 display, two arrow buttons on the right, a circular button between
-                    the two arrows, and a letter display on top. Pressing the arrows will cycle between six
-                    different games of tic-tac-toe.</li>
-                <li>Each board corresponds to a letter in an English word. The boards are ordered from top to bottom 
-                    according to the word, but the module may not initialize at the beginning of the decrypted word. 
-                    Pressing the circular button toggles between the boards and submission letters. In the submission
-                    phase, the 3×3 grid will display letters which, when pressed, are added to the top display;
-                    the arrows can be used to switch between three pages of letters. The bottom-right space on
-                    the third page can be used as a backspace button. Pressing the circular button again will
-                    exit the submission phase, but keep the currently inputted letters. Entering six letters
-                    will automatically submit the input and solve the module if correct, or strike and clear
-                    the input if incorrect.</li>
+                <li>If there is exactly one red wire and the last digit of the serial number is odd, cut the 2nd wire.</li>
+                <li>Otherwise, if the last wire is blue, cut the 4th wire.</li>
+                <li>Otherwise, if there is at least one white wire, cut the first white wire.</li>
+                <li>Otherwise, cut the 2nd wire.</li>
             </ul>
-
-            <em>Decrypting the Boards</em>
-                top-left and leaving a blank slot in between Z and A.</p>
             
         </div>
-        <div class="page-footer">Page 1 of 2</div>
+        <div class="page-footer">Page 2 of PAGE_NUM</div>
     </div>
     <div class="page">
         <div class="page-content">
-            <br>
-            <table class="center">
-                <tr>
-                    <td>___</td>
-                    <td>___</td>
-                    <td>___</td>
-                </tr>
-                <tr>
-                    <td>___</td>
-                    <td>_!_</td>
-                    <td>___</td>
-                </tr>
-                <tr>
-                    <td>___</td>
-                    <td>___</td>
-                    <td>___</td>
-                </tr>
-            </table>
-            
-            <p><br>If the highlighted space is an X, use the left letter in the corresponding space in the grid
-                above. Otherwise, if the space is empty, use the middle letter. Otherwise, if the space is an O,
-                use the right letter.</p>
+            <h2>On the Subject of Switches</h2>
+
+
+            <p>All switches begin in the DOWN position.
+                Toggling a switch refers to moving it from the DOWN position to the UP position or vice versa.</p>
+            <p>There are 4 switches, numbered from left to right.
+                Follow the list of rules from top to bottom <strong>three</strong> times to determine the final switch positions.</p>
+
+
+            <ol>
+                <li>If the serial number has an odd last digit, toggle the first and third switch.</li>
+                <li>If the number of batteries is not 0, toggle the fourth switch.</li>
+                <li>If the first and fourth switches are in the same position, toggle the second switch.</li>
+                <li>Change the position of the first switch to the opposite of the fourth switch.</li>
+                <li>Toggle the first and third switch.</li>
+            </ol>
+
+            <p>When the switches are in the correct final position, press the submit button to solve the module.</p>
+            <p>Submitting incorrect positions will result in a strike.</p>
+
         </div>
-        <div class="page-footer relative-footer">Page 2 of 2</div>
+        <div class="page-footer relative-footer">Page 3 of PAGE_NUM</div>
     </div>
 </body>
 </html>
