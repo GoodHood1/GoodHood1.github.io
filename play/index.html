@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>balis</title>
+    <style>
+      :root {
+        --bg: #f3f3f3;
+        --red: #d9001d;
+        --red-dark: #8d000f;
+        --ink: #1a1a1a;
+      }
+
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        position: relative;
+      }
+
+      .arrow {
+        position: absolute;
+        width: 260px;
+        height: 72px;
+        background: linear-gradient(to right, var(--red), #ef2f3d);
+        border-radius: 12px;
+        box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      .arrow::before {
+        content: "";
+        position: absolute;
+        right: -56px;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: 36px solid transparent;
+        border-bottom: 36px solid transparent;
+        border-left: 56px solid var(--red);
+      }
+
+      .arrow::after {
+        content: "";
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: calc(100% - 88px);
+        height: 18px;
+        background: rgba(255, 255, 255, 0.18);
+        border-radius: 10px;
+      }
+
+      .a1 { top: 6%; left: 14%; transform: rotate(40deg); }
+      .a2 { top: 7%; left: 49%; transform: rotate(90deg); }
+      .a3 { top: 7%; right: 14%; transform: rotate(140deg); }
+      .a4 { top: 26%; left: 2%; transform: rotate(15deg); }
+      .a5 { top: 26%; right: 2%; transform: rotate(160deg); }
+      .a6 { bottom: 10%; left: 12%; transform: rotate(-45deg); }
+      .a7 { bottom: 8%; left: 50%; transform: rotate(-100deg); }
+      .a8 { bottom: 10%; right: 12%; transform: rotate(220deg); }
+      .a9 { top: 48%; left: 7%; transform: rotate(0deg); }
+      .a10 { top: 48%; right: 7%; transform: rotate(180deg); }
+      .a11 { top: 20%; left: 30%; transform: rotate(50deg); }
+      .a12 { top: 20%; right: 30%; transform: rotate(110deg); }
+      .a13 { bottom: 18%; left: 29%; transform: rotate(-70deg); }
+      .a14 { bottom: 18%; right: 29%; transform: rotate(-100deg); }
+
+      .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      .center a {
+        display: inline-block;
+        padding: 34px 56px;
+        background: linear-gradient(180deg, #ff3b4d, var(--red));
+        border: 6px solid #ffffff;
+        border-radius: 24px;
+        color: white;
+        font-weight: 900;
+        font-size: clamp(1.8rem, 4vw, 4rem);
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: 0 0 0 10px rgba(217, 0, 29, 0.15), 0 22px 40px rgba(0, 0, 0, 0.2);
+        animation: flash 0.9s steps(2, end) infinite alternate;
+      }
+
+      .center a:hover {
+        filter: brightness(1.08);
+      }
+
+      @keyframes flash {
+        0% {
+          background: linear-gradient(180deg, #ff4b5a, var(--red));
+          box-shadow: 0 0 0 12px rgba(217, 0, 29, 0.2), 0 0 30px rgba(217, 0, 29, 0.8), 0 22px 40px rgba(0, 0, 0, 0.2);
+          transform: scale(1);
+        }
+        50% {
+          background: linear-gradient(180deg, #ff7a86, #f51736);
+          box-shadow: 0 0 0 12px rgba(217, 0, 29, 0.2), 0 0 50px rgba(255, 45, 70, 1), 0 22px 40px rgba(0, 0, 0, 0.2);
+          transform: scale(1.04);
+        }
+        100% {
+          background: linear-gradient(180deg, #ff3b4d, var(--red));
+          box-shadow: 0 0 0 12px rgba(217, 0, 29, 0.22), 0 0 40px rgba(255, 80, 100, 0.9), 0 22px 40px rgba(0, 0, 0, 0.2);
+          transform: scale(1);
+        }
+      }
+
+
+      @media (max-width: 640px) {
+        .arrow {
+          width: 130px;
+          height: 42px;
+        }
+
+        .arrow::before {
+          right: -30px;
+          border-top: 21px solid transparent;
+          border-bottom: 21px solid transparent;
+          border-left: 30px solid var(--red);
+        }
+
+        .center a {
+          padding: 22px 32px;
+          letter-spacing: 0.08em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="arrow a1"></div>
+    <div class="arrow a2"></div>
+    <div class="arrow a3"></div>
+    <div class="arrow a4"></div>
+    <div class="arrow a5"></div>
+    <div class="arrow a6"></div>
+    <div class="arrow a7"></div>
+    <div class="arrow a8"></div>
+    <div class="arrow a9"></div>
+    <div class="arrow a10"></div>
+    <div class="arrow a11"></div>
+    <div class="arrow a12"></div>
+    <div class="arrow a13"></div>
+    <div class="arrow a14"></div>
+
+    <div class="center">
+      <a href="https://ktane.timwi.de/HTML/Bengo%20Talk.html" target="_blank" rel="noopener">Click Here</a>
+    </div>
+  </body>
+</html>
