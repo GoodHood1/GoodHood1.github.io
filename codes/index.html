@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal Access</title>
+  <style>
+    body {
+        font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #121212;
+      color: #00ff66;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #1e1e1e;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    input[type="password"], input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin-top: 0.2rem;
+      background: #000;
+      border: 1px solid #00ff66;
+      color: #00ff66;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #00ff66;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cc52;
+    }
+
+    .message {
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+
+    .error { color: #ff4444; }
+    .success { color: #00ff66; }
+  </style>
+</head>
+<body>
+
+    <!-- Page 1: PIN Input -->
+  <div class="container" id="stage1">
+    <h2>SYSTEM LOCKED</h2>
+    <p>Enter 4-Digit Access PIN:</p>
+    <input type="text" id="pinInput" maxlength="4">
+    <button onclick="checkPin()">Submit</button>
+  </div>
+
+  <!-- Page 2: Book Verification -->
+  <div class="container" id="stage2" style="display:none;">
+    <h2>SECURITY TERMINAL</h2>
+    <p>AUTHENTICATION REQUIRED: Enter Word 5, Line 3, Page 42</p>
+    <input type="text" id="passInput">
+    <button onclick="checkPass()">Verify</button>
+  </div>
+
+  <!-- Page 3: Override Sequence -->
+  <div class="container" id="stage3" style="display:none;">
+    <h2>OVERRIDE MATRIX</h2>
+    <p>Sequence Coordinates:</p>
+    <ul>
+      <li>1. [Row 2, Col 1]</li>
+      <li>2. [Row 3, Col 2]</li>
+      <li>3. [Row 1, Col 1]</li>
+      <li>4. [Row 2, Col 3]</li>
+    </ul>
+    <input type="text" id="finalInput" maxlength="4" placeholder="Enter 4-Digit Key">
+    <button onclick="checkFinal()">DEACTIVATE</button>
+  </div>
+
+  <script>
+    function checkPin() {
+      if (document.getElementById('pinInput').value === '8105') {
+        document.getElementById('stage1').style.display = 'none';
+        document.getElementById('stage2').style.display = 'block';
+      } else {
+        alert('ACCESS DENIED');
+      }
+    }
+
+    function checkPass() {
+      if (document.getElementById('passInput').value.trim().toUpperCase() === 'SHADOW') {
+        document.getElementById('stage2').style.display = 'none';
+        document.getElementById('stage3').style.display = 'block';
+      } else {
+        alert('INCORRECT PASSPHRASE');
+      }
+    }
+
+    function checkFinal() {
+      if (document.getElementById('finalInput').value === '9648') {
+        document.body.innerHTML = '<h1>SYSTEM OVERRIDDEN. ACCESS GRANTED!</h1>';
+      } else {
+        alert('INVALID OVERRIDE KEY');
+      }
+    }
+  </script>
+</body>
+</html>
