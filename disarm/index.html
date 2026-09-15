@@ -63,5 +63,40 @@
         </div>
         <div class="page-footer relative-footer">Page 3 of PAGE_NUM</div>
     </div>
+    <div class="page" id="binary-flash-page">
+        <div class="page-content">
+            <!-- <img src="SVGs/Switches.svg" class="diagram" -->
+            <h2>On the Subject of Binary Flashes</h2>
+
+            <ul>
+                <li>The 5 LEDs represent a 5 bit binary number. The LED farthest left represents the most significant bit.</li>
+                <li>Each binary number is an entry in one of eight numeric sequences below. The sequences travel left
+                    to right, wrapping around when reaching the end.</li>
+                <li>Two numbers are highlighted in either red, blue or green. Press the corresponding coloured button
+                     when the LED pattern matches one of the highlighted numbers. Pressing the wrong button will result in a strike.</li>
+                </li>
+                <li>Press all three buttons to solve the module.</li>
+            </ul>
+            
+            <table><tr><td>17</td><td>15</td><td>6</td><td class="green">2</td><td>24</td><td class="red">8</td><td>26</td><td class="blue">25</td><td>21</td><td>24</td><td>1</td><td>15</td><td>18</td><td>8</td></tr></table>
+            <table><tr><td>18</td><td>15</td><td>19</td><td>31</td><td class="blue">12</td><td>6</td><td>19</td><td>21</td><td class="green">11</td><td>16</td><td>19</td><td class="red">2</td><td>1</td><td>29</td></tr></table>
+            <table><tr><td>8</td><td class="green">25</td><td class="blue">1</td><td>15</td><td>20</td><td>15</td><td>9</td><td>3</td><td>6</td><td class="red">24</td><td>1</td><td>24</td><td>5</td><td>26</td></tr></table>
+            <table><tr><td>21</td><td>27</td><td>6</td><td>12</td><td>27</td><td>20</td><td>7</td><td class="blue">1</td><td class="red">19</td><td>15</td><td>3</td><td>13</td><td class="green">9</td><td>28</td></tr></table>
+            <table><tr><td>3</td><td>21</td><td>14</td><td>22</td><td>7</td><td class="green">28</td><td>16</td><td>27</td><td class="blue">22</td><td>17</td><td class="red">26</td><td>2</td><td>31</td><td>15</td></tr></table>
+            <table><tr><td class="red">8</td><td>22</td><td>30</td><td>19</td><td>1</td><td>25</td><td class="blue">31</td><td>16</td><td>9</td><td>7</td><td class="green">6</td><td>13</td><td>9</td><td>7</td></tr></table>
+            <table><tr><td>5</td><td>18</td><td class="red">12</td><td>7</td><td>5</td><td class="green">12</td><td>31</td><td>16</td><td>10</td><td class="blue">15</td><td>17</td><td>9</td><td>12</td><td>25</td></tr></table>
+            <table><tr><td>4</td><td>20</td><td>18</td><td>25</td><td>20</td><td class="green">4</td><td>24</td><td>29</td><td>17</td><td class="red">16</td><td class="blue">12</td><td>16</td><td>29</td><td>19</td></tr></table>
+            
+            <h3>Reading binary</h3>
+            <p>Add up the values of each <b>lit</b> LED.</p>
+            <table>
+                <tr><td>LED 1 (Left)</td><td>LED 2</td><td>LED 3</td><td>LED 4</td><td>LED 5 (Right)</td></tr>
+                <tr><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+            </table>
+            <em>(Example, ON-OFF-ON-OFF-ON = 16 + 4 + 1 = 21)</em>
+
+        </div>
+        <div class="page-footer relative-footer">Page 3 of PAGE_NUM</div>
+    </div>
 </body>
 </html>
