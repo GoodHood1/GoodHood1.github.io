@@ -98,5 +98,182 @@
         </div>
         <div class="page-footer relative-footer">Page 3 of PAGE_NUM</div>
     </div>
+    <div class="page" id="playfair-page">
+        <div class="page-content">
+            <!-- <img src="SVGs/Switches.svg" class="diagram" -->
+            <h2>On the Subject of Playfair Cipher</h2>
+
+            <p>You must decrypt an encrypted message by finding the key and pressing the correct button sequence.</p>
+            <h3>Obtaining the key</h3>
+            <p>For each table, stop at the first rule that applies to obtain two key parts. Combine the table 1 and table 2 parts into one string
+                to obtain the key.
+            </p>
+
+            <table class="playfair-table-1">
+                <tr>
+                    <th>There's a lit bob indicator</th>
+                    <td>PLAY</td>
+                </tr>
+                <tr>
+                    <th>The serial number does not contain a vowel</th>
+                    <td>HIDDEN</td>
+                </tr>
+                <tr>
+                    <th>There are exactly 2 batteries</th>
+                    <td>CIPHER</td>
+                </tr>
+                <tr>
+                    <th>The last serial digit is even</th>
+                    <td>HELLO</td>
+                </tr>
+                <tr>
+                    <th>There is an unlit indicator</th>
+                    <td>CHARLIE</td>
+                </tr>
+                <tr>
+                    <th>Otherwise</th>
+                    <td>DUNGEON</td>
+                </tr>
+            </table>
+            <br>
+
+            <table class="centered-text">
+                <tr>
+                    <td class="no-border"></td>
+                    <th colspan="4">Light Colour</th>
+                </tr>
+                <tr>
+                    <td class="no-border"></td>
+                    <th>Magenta</th>
+                    <th>Blue</th>
+                    <th>Orange</th>
+                    <th>Yellow</th>
+                </tr>
+                <tr>
+                    <th>Bomb has lit and unlit indicators</th>
+                    <td>SAFE</td>
+                    <td>EFAS</td>
+                    <td>MESSAGE</td>
+                    <td>GROOVE</td>
+                </tr>
+                <tr>
+                    <th>Serial number contains an odd digit</th>
+                    <td>CODE</td>
+                    <td>EDOC</td>
+                    <td>QUIET</td>
+                    <td>ETIUQ</td>
+                </tr>
+                <tr>
+                    <th>At least 1 battery is present</th>
+                    <td>GROOVE</td>
+                    <td>EVOORG</td>
+                    <td>TEIUQ</td>
+                    <td>QUITE</td>
+                </tr>
+                <tr>
+                    <th>Otherwise</th>
+                    <td>MESSAGE</td>
+                    <td>EGASSEM</td>
+                    <td>SAFE</td>
+                    <td>EDOC</td>
+                </tr>
+            </table>
+
+            <p>If the sum of the serial number digits is greater than 8, <b>reverse</b> the entire key.</p>
+            <p>Now, remove all duplicate letters in the key, keeping only the first occurance to make every character unique.</p>
+        </div>
+        <div class="page-footer relative-footer">Page 3 of PAGE_NUM</div>
+    </div>
+        <div class="page" id="playfair-page">
+        <div class="page-content">
+            <h3>Decrypting the message </h3>
+            <ul>
+                <li>Create a 5x5 grid of letters. Start with your <b>key</b> and fill the rest of the grid with the unused
+                letters of the alphabet (excluding J). </li>
+                <li>Split the message displayed on the module into letter pairs. For each pair, find them in the grid: </li>
+                <ul>
+                    <li>If the letters are in the same row, replace them with the letters to their immediate left (wrapping around to the right if needed).</li>
+                    <li>If the letters are in the same column, replace them with the letters immediately above (wrapping around to the bottom if needed).</li>
+                    <li>If the letters are in different rows and columns, replace each letter with the letter in its own row and the column of the other letter.</li>
+                </ul>
+                <li>Combine the resulting letters to form the decrypted message. 'J' and 'I' are considered the same letter.</li>
+            </ul>
+
+            <p>Find the decrypted message in the table with the correct colour and input the button sequence shown.</p>
+            <table class="centered-table centered-text">
+                    <tr>
+                        <td class="no-border"></td>
+                        <td class="no-border"></td>
+                        <th colspan="4">Light Colour</th>
+                    </tr>
+                    <tr>
+                        <td class="no-border"></td>
+                        <td class="no-border"></td>
+                        <th>Magenta</th>
+                        <th>Blue</th>
+                        <th>Orange</th>
+                        <th>Yellow</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="8">Decrypted Message</th>
+                        <th>BEAVER</th>
+                        <td>ABCD</td>
+                        <td>CDAB</td>
+                        <td>BADC</td>
+                        <td>DABC</td>
+                    </tr>
+                    <tr>
+                        <th>CLOCKS</th>
+                        <td>BCDA</td>
+                        <td>DACB</td>
+                        <td>ADCB</td>
+                        <td>ABCD</td>
+                    </tr>
+                    <tr>
+                        <th>LOADER</th>
+                        <td>CDAB</td>
+                        <td>ACBD</td>
+                        <td>DCBA</td>
+                        <td>BCDA</td>
+                    </tr>
+                    <tr>
+                        <th>PEANUT</th>
+                        <td>DABC</td>
+                        <td>CBDA</td>
+                        <td>CBAD</td>
+                        <td>CDAB</td>
+                    </tr>
+                    <tr>
+                        <th>PILOTS</th>
+                        <td>ABDC</td>
+                        <td>BDAC</td>
+                        <td>BACD</td>
+                        <td>DACB</td>
+                    </tr>
+                    <tr>
+                        <th>SHRIMP</th>
+                        <td>BDCA</td>
+                        <td>DBCA</td>
+                        <td>ACDB</td>
+                        <td>ACBD</td>
+                    </tr>
+                    <tr>
+                        <th>SIERRA</th>
+                        <td>CABD</td>
+                        <td>BCAD</td>
+                        <td>CDBA</td>
+                        <td>CBDA</td>
+                    </tr>
+                    <tr>
+                        <th>TOTEMS</th>
+                        <td>DCAB</td>
+                        <td>CADB</td>
+                        <td>DBAC</td>
+                        <td>BDAC</td>
+                    </tr>
+                </table>
+        </div>
+        <div class="page-footer relative-footer">Page 3 of PAGE_NUM</div>
+    </div>
 </body>
 </html>
